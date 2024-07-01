@@ -6,20 +6,26 @@ labels: ""
 assignees: ""
 ---
 
-**Describe the bug** A clear and concise description of what the bug is.
+## Bug Description
 
-**To Reproduce** Steps to reproduce the behavior:
+<!-- Please provide a clear and concise description of what the bug is. -->
+
+## How to Reproduce the Bug
 
 1. Configure ...
 2. Run ansible-playbook with ...
 
-**Expected behavior** A clear and concise description of what you expected to
-happen.
+## Expected Behavior
 
-**Environment (please complete the following information):**
+<!-- Please provide a clear and concise description of what you expected to
+happen. -->
 
-- OS: [e.g. iOS]
+## Environment
+
+- OS:
 - Ansible Version:
 - Python Version:
 
-**Additional context** Add any other context about the problem here.
+## Additional Context
+
+<!-- Add any other context about the problem here. -->
