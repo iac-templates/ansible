@@ -24,7 +24,7 @@ jobs:
         uses: ansible/ansible-lint@v24.7.0
 
       - name: markdownlint-cli2
-        uses: DavidAnson/markdownlint-cli2-action@v16
+        uses: DavidAnson/markdownlint-cli2-action@v17
 
   security:
     runs-on: ubuntu-latest
