@@ -37,13 +37,10 @@ jobs:
         fail_on: high,medium
         output_path: results-dir
         platform_type: ansible
-        output_formats: "json,sarif"
+        output_formats: "sarif"
       continue-on-error: true
-    - name: Show results
-      run: |
-        ls results-dir/
-        cat results-dir/results.sarif
-        cat results-dir/results.json
+    - name: Fix results.sarif permissions
+      run: chmod 444 results-dir/results.sarif
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v3
       with:
