@@ -30,7 +30,7 @@ jobs:
     - name: Mkdir results-dir
       run: mkdir -p results-dir
     - name: Run KICS Scan with SARIF result
-      uses: checkmarx/kics-github-action@v2.1.8
+      uses: checkmarx/kics-github-action@v2.1.7
       with:
         path: "roles,tasks"
         ignore_on_exit: results
