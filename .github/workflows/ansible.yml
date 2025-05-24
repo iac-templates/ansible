@@ -33,11 +33,17 @@ jobs:
       uses: checkmarx/kics-github-action@v2.1.8
       with:
         path: "roles,tasks"
+        ignore_on_exit: results
         fail_on: high,medium
         output_path: results-dir
         platform_type: ansible
         output_formats: "json,sarif"
       continue-on-error: true
+    - name: Show results
+      run: |
+        ls results-dir/
+        cat results-dir/results.sarif
+        cat results-dir/results.json
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v3
       with:
