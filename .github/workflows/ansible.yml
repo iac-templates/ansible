@@ -30,13 +30,14 @@ jobs:
     - name: Mkdir results-dir
       run: mkdir -p results-dir
     - name: Run KICS Scan with SARIF result
-      uses: checkmarx/kics-github-action@v2.1.3
+      uses: checkmarx/kics-github-action@v2.1.7
       with:
         path: "roles,tasks"
+        ignore_on_exit: results
         fail_on: high,medium
         output_path: results-dir
         platform_type: ansible
-        output_formats: "json,sarif"
+        output_formats: "sarif"
       continue-on-error: true
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v3
